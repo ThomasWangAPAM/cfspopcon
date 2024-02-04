@@ -8,5 +8,3 @@ cfspopcon: 0D Plasma Calculations & Plasma OPerating CONtours
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10054880.svg)](https://doi.org/10.5281/zenodo.10054880)
 
 For more information please have a look at our [documentation](https://cfspopcon.readthedocs.io/en/latest/).
-
-I'm GRANDPAWTF
