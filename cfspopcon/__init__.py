@@ -5,10 +5,11 @@ __version__ = metadata(__package__)["Version"]
 __author__ = metadata(__package__)["Author"]
 
 from . import algorithms, file_io, formulas, helpers, named_options, unit_handling
-from .algorithms.algorithm_class import Algorithm, CompositeAlgorithm
+from .algorithm_class import Algorithm, CompositeAlgorithm
 from .input_file_handling import read_case
 from .plotting import read_plot_style
 from .point_selection import find_coords_of_maximum, find_coords_of_minimum
+from .read_atomic_data import AtomicData
 from .unit_handling import (
     Quantity,
     Unit,
@@ -22,11 +23,12 @@ from .unit_handling import (
     wraps_ufunc,
 )
 
+Algorithm.write_yaml()
+
 # export main classes users should need as well as the option enums
 __all__ = [
     "helpers",
     "named_options",
-    "algorithms",
     "formulas",
     "unit_handling",
     "ureg",
@@ -46,4 +48,6 @@ __all__ = [
     "Algorithm",
     "CompositeAlgorithm",
     "file_io",
+    "AtomicData",
+    "algorithms",
 ]

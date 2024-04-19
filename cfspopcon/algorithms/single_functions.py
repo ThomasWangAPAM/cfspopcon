@@ -2,9 +2,8 @@
 import numpy as np
 
 from .. import formulas
-from ..named_options import Algorithms
+from ..algorithm_class import Algorithm
 from ..unit_handling import ureg
-from .algorithm_class import Algorithm
 
 calc_confinement_transition_threshold_power = Algorithm.from_single_function(
     formulas.calc_confinement_transition_threshold_power, return_keys=["P_LH_thresh"], name="calc_confinement_transition_threshold_power"
@@ -76,5 +75,3 @@ calc_upstream_electron_density = Algorithm.from_single_function(
     return_keys=["upstream_electron_density"],
     name="calc_upstream_electron_density",
 )
-
-SINGLE_FUNCTIONS = {Algorithms[key]: val for key, val in locals().items() if isinstance(val, Algorithm)}
